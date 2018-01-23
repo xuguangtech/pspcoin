@@ -1,19 +1,39 @@
 <!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: en }}">
+<!-- head -->
+{% include html-head.html %}
+<body>
+    <!-- ================= START PRELOADING ================= -->
+    <div class="loading-overlay">
+        <div class="sk-folding-cube">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!-- ================= // END PRELOADING ================= -->
 
-　　<html>
+    <!-- header -->
+    {% include header.html %}
 
-　　<head>
+    <!-- aboutus -->
+    {% include aboutus.html %}
 
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- services -->
+    {% include services.html %}
 
-　　　　<title>{{ page.title }}</title>
+    <!-- resume -->
+    {% include resume.html %}
 
-　　</head>
+    <!-- products -->
+    {% include products.html %}
 
-　　<body>
+    <!-- contact -->
+    {% include contact.html %}
 
-　　　　{{ content }}
+    <!-- footer -->
+    {% include footer.html %}
 
-　　</body>
-
-　　</html>
+    <!-- scripts -->
+    {% include scripts.html %}
+</body>
+</html>
